@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <title>HTML/Javascript Calculator</title>
+    <script type="text/javascript">
+    //SCF alert('Hello Above');
+    </script>
+  </head>
+  <body>
+    <h1>HTML/Javascript Calculator</h1>
+    <p>Here is a HTML/JavaScript Calculator</p>
+    <div>
+      <div>
+        <button name="1" type="button" text="1" onClick="input(1)" class="numberKey">1</button>
+        <button class="numberKey">2</button>
+        <button class="numberKey">3</button>
+      </div>
+      <div>
+        <button class="numberKey">4</button>
+        <button class="numberKey">5</button>
+        <button class="numberKey">6</button>
+      </div>
+      <div>
+        <button class="numberKey">7</button>
+        <button class="numberKey">8</button>
+        <button class="numberKey">9</button>
+      </div>
+      <div>
+        <button class="numberKey">0</button>
+      </div>
+    </div>
+    <div></div>
+    <div>
+      <button class="operatorKey">+</button>
+      <button class="operatorKey">-</button>
+      <button class="operatorKey">*</button>
+      <button class="operatorKey">/</button>
+      <div>
+        <button class="operatorKey">=</button>
+      </div>
+   </div>
+   <div>
+    <button name="Clear" type="button" onClick="clear">Clear</button>
+   </div>
+   <div>
+     <textarea id="display"></textarea>
+   </div>
+
+  </body>
+  <script type='text/javascript'>
+  // var numberKey = document.querySelector('.numberKey'); 
+  // var operatorKey = document.querySelector('.operatorKey');
+  //SCF alert('Hello Below');
+
+  function input(v) {
+    alert('You pressed a number key');
+    document.querySelector('#display').value = v;
+
+  }
+
+  // document.getElementsByClassName('numberKey').onclick = function() {
+  //   alert('You pressed a number key');
+  // }
+
+  // // numberKey.addEventListener('click', function(ev) {
+  // //   alert('you pressed a number key!');
+  // // }, false);
+
+  // // operatorKey.addEventListener('click', function (ev) {
+  // //   alert('you pressed an operator key');
+  // // }, false);
+
+  function clear() {
+    document.querySelector('#display').value = "";
+  }
+
+
+  // function addition (x, y) {
+
+  // }
+  // function subtraction (x, y) {
+
+  // }
+  // function multiplication (x, y) {
+
+  // }
+  // function division (x, y) {
+
+  // }
+  // function 
+  </script>
+</html>

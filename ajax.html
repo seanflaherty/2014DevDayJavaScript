@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Learning jQuery and Ajax</title>
+    
+  </head>
+  <body>
+    <h1>Learning jQuery and Ajax</h1>
+    <p>I'm going to learn jQuery and Ajax!</p>
+    <p>First Paragraph</p>
+    <p>Second Paragraph</p>
+    <p>Third Paragraph</p>
+   
+
+  </body>
+  <script type='text/javascript'>
+      $( "p" ).click(function() {
+        $.get("http://api.openweathermap.org/data/2.5/weather?q=Baltimore", function(data) {
+          console.log(data.name);
+        });
+        $( this ).fadeOut(500);
+      });
+    </script>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Learning jQuery</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+    <h1>Learning Javascript</h1>
+    <div id="foo">
+    <div class="bar">bar1</div>
+    <div class="bar">bar2</div>
+  </div>
+  <div id="baz">baz</div>
+  <script type='text/javascript'>
+  $("#baz").css("background-color", "blue");
+  $(".bar").prependTo("#baz");
+  </script>
+
+  </body>
+
+</html>

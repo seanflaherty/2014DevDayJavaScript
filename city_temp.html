@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <title>City Temprature</title>
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+    <h1>City Temprature</h1>
+    <p>What is the temprature in your city?</p>
+    <div>
+    <input type="text" id="city">Enter a City</input>
+    </div>
+    <div>
+    <button id="get-temprature" onClick=""> Get the Temprature</button>
+    </div>
+    <div>
+    <p id="results">Temprature and Conditions</p>
+    </div>
+   
+
+  
+  <script type='text/javascript'>
+  function kToF(k) {
+    return Math.round(9 / 5 * (k-273) + 32);
+  }
+
+  function cityName() {
+    return $('#city').val();
+  }
+
+  function showResults(temp, cond) {
+    $('#results').text("In " + cityName() + " it's " + temp + " and " + cond);
+  }
+  var url = "http://api.openweathermap.org/data/2.5/weather?q=";
+  function getTemprature() {
+    $.get(url + $('#city').val(), function(data) {
+          //SCF alert('got data');
+          var temp = kToF(data.main.temp);
+          var cond = data.weather[0].description;
+          //SCF alert('temp');
+          //SCF alert(cond);
+          showResults(temp, cond);
+          console.log(temp, cond);
+        });
+
+  }
+  $(document).ready(function(){
+    $('button').click(function(){
+      getTemprature();
+    });
+
+  });
+
+    </script>
+  </body>
+</html>
